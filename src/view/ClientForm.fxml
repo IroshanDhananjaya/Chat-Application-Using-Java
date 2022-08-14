@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ctxClientForm" prefHeight="636.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientFormController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="549.0" style="-fx-background-color: #352b48;">
+         <children>
+            <ImageView fitHeight="49.0" fitWidth="47.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/img/user(2).png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblClientName" layoutX="68.0" layoutY="18.0" text="Client Name" textFill="#aba7a7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="22.0" layoutX="455.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/img/video-camera.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="505.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/img/phone-call.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtMsgToSendArea" layoutX="14.0" layoutY="579.0" prefHeight="35.0" prefWidth="445.0" />
+      <Button layoutX="469.0" layoutY="581.0" mnemonicParsing="false" onAction="#btnSendMsgOnAction" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #0009fa;" text="Send" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="35.0" fitWidth="31.0" layoutX="421.0" layoutY="580.0" onMouseClicked="#uploadImgMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/camera.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="14.0" layoutY="63.0" prefHeight="511.0" prefWidth="527.0">
+         <content>
+            <VBox fx:id="vBox" prefHeight="503.0" prefWidth="514.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
